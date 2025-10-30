@@ -19,8 +19,8 @@ sources:
       - name: airports
         identifier: airports
 
-      - name: regions1
-        identifier: regions
+      - name: regions
+        identifier: regions1
 
 # This is for documentation purposes, ALWAYS DOCUMENT!
 models:

@@ -13,9 +13,7 @@ daily_flattened AS (
            (json_data ->> 'tmax')::NUMERIC AS max_temp_c,
            (json_data ->> 'prcp')::NUMERIC AS precipitation_mm,
            (json_data ->> 'snow')::NUMERIC::INTEGER AS max_snow_mm,
-           (json_data ->> 'wdir')::NUMERIC::INTEGER AS avg_wind_direction,
            (json_data ->> 'wspd')::NUMERIC AS avg_wind_speed,
-           (json_data ->> 'wpgt')::NUMERIC AS avg_peakgust,
            (json_data ->> 'pres')::NUMERIC AS avg_pressure_hpa,
            (json_data ->> 'tsun')::NUMERIC::INTEGER AS sun_minutes
     FROM daily_raw

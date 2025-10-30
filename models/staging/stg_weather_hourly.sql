@@ -14,7 +14,7 @@ hourly_flattened AS (
            (json_data ->> 'rhum')::NUMERIC AS relative_humidity,
            (json_data ->> 'snow')::NUMERIC::INTEGER AS max_snow_mm,
            (json_data ->> 'temp')::NUMERIC AS air_temperature,
-           (json_data ->> 'time')::DATE AS date_time,
+           (json_data ->> 'time')::timestamp AS date_time,
            (json_data ->> 'tsun')::NUMERIC AS sunshine_duration,
            (json_data ->> 'wdir')::NUMERIC::INTEGER AS wind_direction,
            (json_data ->> 'wspd')::NUMERIC AS wind_speed,
